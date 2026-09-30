@@ -1,0 +1,604 @@
+[20-Jun-2025 02:29:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[20-Jun-2025 02:50:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[20-Jun-2025 02:54:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[22-Jun-2025 01:33:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[22-Jun-2025 01:36:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[22-Jun-2025 01:50:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[22-Jun-2025 01:53:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[24-Jun-2025 18:46:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[24-Jun-2025 18:46:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[24-Jun-2025 18:46:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[24-Jun-2025 18:47:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[24-Jun-2025 18:48:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[24-Jun-2025 18:51:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[24-Jun-2025 18:52:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[24-Jun-2025 18:52:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[24-Jun-2025 18:54:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[26-Jun-2025 07:44:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[26-Jun-2025 09:13:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[30-Jun-2025 12:37:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[30-Jun-2025 12:42:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[30-Jun-2025 18:17:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[01-Jul-2025 19:39:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[03-Jul-2025 05:03:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Jul-2025 05:06:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[03-Jul-2025 05:23:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Jul-2025 05:25:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[06-Jul-2025 03:23:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[06-Jul-2025 04:02:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[06-Jul-2025 05:31:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[06-Jul-2025 05:56:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[08-Jul-2025 21:16:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[08-Jul-2025 21:16:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[08-Jul-2025 21:16:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[08-Jul-2025 21:16:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[08-Jul-2025 21:17:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[08-Jul-2025 21:17:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[08-Jul-2025 21:18:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[13-Jul-2025 08:54:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[18-Jul-2025 09:36:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[18-Jul-2025 09:38:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[18-Jul-2025 09:38:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[18-Jul-2025 12:14:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[18-Jul-2025 12:16:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[18-Jul-2025 12:17:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[23-Jul-2025 19:39:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[23-Jul-2025 19:42:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[23-Jul-2025 19:42:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[28-Jul-2025 10:46:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[31-Jul-2025 10:58:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[31-Jul-2025 18:41:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Aug-2025 01:38:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Aug-2025 01:54:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Aug-2025 17:34:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[06-Aug-2025 15:51:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[10-Aug-2025 12:13:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[10-Aug-2025 12:16:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[10-Aug-2025 12:17:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[10-Aug-2025 12:18:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[10-Aug-2025 12:19:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[10-Aug-2025 12:19:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[10-Aug-2025 12:24:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[10-Aug-2025 12:37:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[10-Aug-2025 12:37:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[11-Aug-2025 09:07:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[11-Aug-2025 09:12:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[11-Aug-2025 11:04:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[11-Aug-2025 11:04:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[16-Aug-2025 18:49:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[16-Aug-2025 18:50:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Sep-2025 05:12:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[13-Sep-2025 02:09:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[13-Sep-2025 02:09:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[13-Sep-2025 04:23:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[13-Sep-2025 04:23:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[13-Sep-2025 17:38:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[20-Sep-2025 14:14:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[21-Sep-2025 01:52:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[21-Sep-2025 01:52:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[21-Sep-2025 01:52:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[26-Sep-2025 19:00:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[30-Sep-2025 20:00:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[30-Sep-2025 20:00:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[30-Sep-2025 20:00:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[02-Oct-2025 18:15:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[06-Oct-2025 09:56:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[10-Oct-2025 09:22:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[14-Oct-2025 21:01:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[24-Oct-2025 06:54:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[27-Oct-2025 04:39:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[19-Mar-2026 18:24:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[02-Jun-2026 22:50:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[02-Jun-2026 23:09:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[02-Jun-2026 23:47:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[02-Jun-2026 23:50:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[02-Jun-2026 23:55:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[03-Jun-2026 00:29:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[03-Jun-2026 00:38:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[03-Jun-2026 00:40:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/logging.php on line 20
+[03-Jun-2026 00:42:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[06-Jun-2026 03:56:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[11-Jul-2026 20:02:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[17-Jul-2026 00:13:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[17-Jul-2026 00:13:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[17-Jul-2026 00:13:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[17-Jul-2026 00:13:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[17-Jul-2026 00:13:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[17-Jul-2026 00:13:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[17-Jul-2026 00:13:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[17-Jul-2026 00:13:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[17-Jul-2026 00:13:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[17-Jul-2026 00:13:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[17-Jul-2026 00:13:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[17-Jul-2026 00:13:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[17-Jul-2026 00:13:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[17-Jul-2026 00:13:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[17-Jul-2026 00:13:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[01-Aug-2026 00:33:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[01-Aug-2026 14:07:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[01-Aug-2026 14:07:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[01-Aug-2026 14:28:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[01-Aug-2026 14:28:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[01-Aug-2026 14:28:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[01-Aug-2026 14:28:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[01-Aug-2026 14:28:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[01-Aug-2026 14:28:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[01-Aug-2026 14:29:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[17-Aug-2026 13:20:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[17-Aug-2026 13:20:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[17-Aug-2026 13:41:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[17-Aug-2026 13:41:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[17-Aug-2026 13:41:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[17-Aug-2026 13:41:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[17-Aug-2026 13:41:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[17-Aug-2026 13:41:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[11-Sep-2026 19:41:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[11-Sep-2026 20:22:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[11-Sep-2026 20:24:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[11-Sep-2026 20:27:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[11-Sep-2026 20:30:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[11-Sep-2026 20:32:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[11-Sep-2026 20:35:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[19-Sep-2026 13:03:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home3/allwi3ci/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/view.php on line 17
+[19-Sep-2026 14:44:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/session.php on line 21
+[19-Sep-2026 14:52:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/cache.php on line 21
+[19-Sep-2026 15:49:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/database.php on line 18
+[19-Sep-2026 15:51:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/filesystems.php on line 16
+[19-Sep-2026 15:56:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/services.php on line 18
+[19-Sep-2026 15:59:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/broadcasting.php on line 18
+[24-Sep-2026 15:08:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/queue.php on line 16
+[24-Sep-2026 15:13:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/app.php on line 16
+[24-Sep-2026 15:14:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home3/allwi3ci/public_html/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/allwi3ci/public_html/config/logging.php on line 20

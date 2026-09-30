@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /thank-you
+Allow: /
+
+Sitemap: https://allwinrotoplast.com/sitemap.xml

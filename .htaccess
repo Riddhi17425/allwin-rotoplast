@@ -1,0 +1,45 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Block access to all subdomains like mail.allwinrotoplast.com
+    RewriteCond %{HTTP_HOST} !^allwinrotoplast\.com$ [NC]
+    RewriteRule ^(.*)$ https://allwinrotoplast.com/$1 [R=301,L]
+
+    # Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # Laravel-style rewrite for index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Manual 301 Redirects
+Redirect 301 /pallet-container/pallet-container https://allwinrotoplast.com/pallet-container/plastic-pallet-container
+Redirect 301 /safbin/safbins https://allwinrotoplast.com/safbin/safbins-and-storage-bins
+Redirect 301 /roto-moulded-plastic-dustbins/arp-60-db https://allwinrotoplast.com/dustbins/plastic-dustbin-60-liter
+Redirect 301 /roto-moulded-plastic-dustbins/arp-80-db https://allwinrotoplast.com/dustbins/plastic-dustbin-80-liter
+Redirect 301 /roto-moulded-plastic-dustbins/arp-110-db https://allwinrotoplast.com/dustbins/plastic-dustbin-110-liter
+Redirect 301 /roto-moulded-plastic-dustbins/arp-240-db-and-120-dbw https://allwinrotoplast.com/dustbins/plastic-dustbin-240-liter
+Redirect 301 /custom-rotational https://allwinrotoplast.com/custom-rotational-moulding
+
+# PHP version config (from cPanel)
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81___lsphp .php .php8 .phtml
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81___lsphp .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

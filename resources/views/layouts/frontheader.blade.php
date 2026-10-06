@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta property="og:title" content="{{ $metatitle }}">
 <meta property="og:description" content="{{ $metadescription }}">
-<meta property="og:url" content="{{ $_SERVER['SCRIPT_URI'] }}">
+<meta property="og:url" content="{{ url()->current() }}">
 @if(isset($og_image) && $og_image != '')
     <meta property="og:image" content="{{ asset('public/images/'.$og_image) }}" />
     @else
@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @endif
  <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="627">
-<link rel="canonical" href="{{ $_SERVER['SCRIPT_URI'] }}" />
+<link rel="canonical" href="{{ url()->current() }}" />
 
 
     <!--fbmeta-->

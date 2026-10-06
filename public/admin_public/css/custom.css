@@ -1,0 +1,18 @@
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+
+.note-editor.note-airframe .note-editing-area, .note-editor.note-frame .note-editing-area {
+    overflow-y: scroll !important;
+    height: 300px;
+}
+
+.note-editor.note-frame.card {
+    height: 300px;
+    scroll-behavior:smooth;
+}
+.card-warning:not(.card-outline)>.card-header, .card-warning:not(.card-outline)>.card-header a {
+    color: #343a40ed !important;
+}
+.card-warning:not(.card-outline)>.card-header {
+    background-color: #2c2a242b;
+}

@@ -31,6 +31,7 @@ use App\Http\Controllers\admin\DistributorController;
 use App\Http\Controllers\admin\CatelogueController;
 use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\ProductPriceListingController;
+use App\Http\Controllers\SitemapController;
 
 
 /*
@@ -43,6 +44,10 @@ use App\Http\Controllers\ProductPriceListingController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+    // START - SITEMAP ROUTE
+    Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+    // END - SITEMAP ROUTE
 
     //Front route
     Route::get('/', [dashboardController::class, 'index']);

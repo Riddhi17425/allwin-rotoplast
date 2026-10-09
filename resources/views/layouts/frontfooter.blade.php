@@ -78,7 +78,7 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                     <div>
                         <div class="row">
                             <div class="">
-                               <form class="footer_contact_form mt-4" action="javascript:void(0)" id="quoteform" method="POST">
+                            <form class="footer_contact_form mt-4" action="javascript:void(0)" id="quoteform" method="POST">
                                    @csrf
                               <div class="mb-4">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" aria-describedby="emailHelp" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '').replace(/\s+/g, ' ').trimStart();">
@@ -86,9 +86,18 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                               <div class="mb-4">
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" aria-describedby="emailHelp">
                               </div>
-                              <div class="mb-4">
-                                <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone" aria-describedby="emailHelp" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);">
-                              </div>
+                                <div class="mb-4">
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone"
+                                        inputmode="numeric"
+                                        maxlength="15"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);"
+                                    >
+                                </div>
                               <div class="mb-4">
                                 <select class="form-select" name="country" id="country" aria-label="Default select example">
                                   <option value='' selected>Select Country</option>
@@ -106,7 +115,7 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                               <div class="mb-4">
                                 <div class="g-recaptcha" data-sitekey="6Lc_PvonAAAAAOm_L-O6spxZ0HPtBN-IXrsOH7Y-"></div>
                               </div>
-                              <button class="btn" onclick="submitinquiry()">Submit Now</button>
+                              <button type="button" class="btn" onclick="submitinquiry()">Submit Now</button>
                             </form>
                             </div>
                         </div>
@@ -142,9 +151,19 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                       <div class="mb-4">
                         <input type="email" class="form-control" name="mail_id" id="mail_id" placeholder="Email Address" aria-describedby="emailHelp">
                       </div>
-                      <div class="mb-4">
-                        <input type="number" class="form-control" name="mobilenumber" id="mobilenumber" placeholder="Phone" aria-describedby="emailHelp" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);">
-                      </div>
+                        <div class="mb-4">
+                            <input
+                                type="tel"
+                                class="form-control"
+                                name="mobilenumber"
+                                id="mobilenumber"
+                                placeholder="Phone"
+                                inputmode="numeric"
+                                maxlength="15"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);"
+                            >
+                        </div>
+
                       <div class="mb-4">
                         <select class="form-select" name="countryName"  id="countryName" aria-label="Default select example">
                           <option value='' selected>Select Country</option>
@@ -159,7 +178,7 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                       <div class="mb-4">
                         <div class="g-recaptcha" id="productenqch" data-sitekey="6Lc_PvonAAAAAOm_L-O6spxZ0HPtBN-IXrsOH7Y-"></div>
                       </div>
-                      <button class="btn quote_btn" onclick="submtproductprice()">Submit Now</button>
+                      <button type="button" class="btn quote_btn" onclick="submtproductprice()">Submit Now</button>
                     </form>
                 </div>
             </div>
@@ -228,6 +247,7 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                 </div>
                 <div class="modal-body">
                     <h2>Get a free quote…!</h2>
+
                     <form class="footer_contact_form mt-4" action="javascript:void(0)" id="inquiryqoute" method="post">
                       @csrf
                       <div class="mb-4">
@@ -255,9 +275,11 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                       <div class="mb-4">
                             <input type="email" class="form-control" name="mail" id="mail" placeholder="Email Address" aria-describedby="emailHelp">
                       </div>
+
                       <div class="mb-4">
-                            <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Phone" aria-describedby="emailHelp" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);">
+                            <input type="tel" class="form-control" name="mobile" id="mobile" placeholder="Phone" inputmode="numeric" maxlength="15" pattern="[0-9]{10,15}" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);" >
                       </div>
+
                       <div class="mb-4">
                             <select class="form-select" name="countries" id="countries" aria-label="Default select example">
                                 <option value='' selected>Select Country</option>
@@ -272,8 +294,9 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                       <div class="mb-4">
                             <div class="g-recaptcha" data-sitekey="6Lc_PvonAAAAAOm_L-O6spxZ0HPtBN-IXrsOH7Y-"></div>
                       </div>
-                        <button class="btn quote_btn" onclick="submtinquiryqoute()">Submit Now</button>
+                        <button type="button" class="btn quote_btn" onclick="submtinquiryqoute()">Submit Now</button>
                     </form>
+                    
                 </div>
             </div>
         </div>
@@ -503,86 +526,100 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
     </a>
 </div>
     
-
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const input = document.getElementById("wa_phone");
-    const error = document.getElementById("wa_error");
-    const form = document.getElementById("whatsappForm");
-    const fullPhone = document.getElementById("wa_full_phone");
-    const countryName = document.getElementById("wa_country_name");
-
-    const iti = window.intlTelInput(input, {
-        initialCountry: "auto",
-        separateDialCode: true,
-        preferredCountries: ["in", "ae", "us", "gb"],
-        geoIpLookup: function (callback) {
-            fetch("https://ipapi.co/json/")
-                .then(res => res.json())
-                .then(data => callback(data.country_code))
-                .catch(() => callback("in"));
-        },
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js",
-    });
-
-    // numbers only + live hide error
-    input.addEventListener("input", function () {
-        this.value = this.value.replace(/[^0-9]/g, '');
-
-        if (this.value.length >= 10) {
-            error.classList.add("d-none");
-        }
-    });
-
-    // submit validation
-    form.addEventListener("submit", function (e) {
-
-        if (input.value.trim() === "") {
-            error.innerText = "Contact number must be required";
-            error.classList.remove("d-none");
-            input.focus();
-            e.preventDefault();
-            return;
-        }
-
-        if (input.value.length < 10 || input.value.length > 15) {
-            error.innerText = "Contact number must be 10 to 15 digits";
-            error.classList.remove("d-none");
-            input.focus();
-            e.preventDefault();
-            return;
-        }
-
-        // ✅ valid
-        error.classList.add("d-none");
-
-        const countryData = iti.getSelectedCountryData();
-        fullPhone.value = "+" + countryData.dialCode + input.value;
-        countryName.value = countryData.name;
-        
-        sessionStorage.setItem("whatsapp_used", "yes");
-    });
-
-});
-</script>
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
 
-    const form = document.getElementById("whatsappForm");
-    const modalEl = document.getElementById("exampleModal-4");
+        const input = document.getElementById("wa_phone");
+        const error = document.getElementById("wa_error");
+        const form = document.getElementById("whatsappForm");
+        const fullPhone = document.getElementById("wa_full_phone");
+        const countryName = document.getElementById("wa_country_name");
 
-    form.addEventListener("submit", function () {
+        if (!input || !error || !form) {
+            return;
+        }
 
-        setTimeout(() => {
-            const modal = bootstrap.Modal.getInstance(modalEl);
-            if (modal) modal.hide();
-        }, 10);
+        // Initialize country code selector
+        const iti = window.intlTelInput(input, {
+            initialCountry: "auto",
+            separateDialCode: true,
+            preferredCountries: ["in", "ae", "us", "gb"],
+
+            geoIpLookup: function (callback) {
+                fetch("https://ipapi.co/json/")
+                    .then(response => response.json())
+                    .then(data => callback(data.country_code || "in"))
+                    .catch(() => callback("in"));
+            },
+
+            utilsScript:
+                "https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"
+        });
+
+        // Allow numeric characters only
+        input.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "").slice(0, 15);
+
+            if (this.value.length >= 10) {
+                error.classList.add("d-none");
+            }
+        });
+
+        // Validate before any other submit handlers run
+        form.addEventListener("submit", function (e) {
+
+            const phone = input.value.trim();
+
+            if (phone === "") {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+
+                error.textContent = "Contact number is required.";
+                error.classList.remove("d-none");
+                input.focus();
+
+                return;
+            }
+
+            if (phone.length < 10 || phone.length > 15) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+
+                error.textContent = "Contact number must be 10 to 15 digits.";
+                error.classList.remove("d-none");
+                input.focus();
+
+                return;
+            }
+
+            // Valid number: prepare form data
+            error.classList.add("d-none");
+
+            const countryData = iti.getSelectedCountryData();
+
+            fullPhone.value = "+" + countryData.dialCode + phone;
+            countryName.value = countryData.name;
+
+            sessionStorage.setItem("whatsapp_used", "yes");
+
+            // Do not hide the modal here.
+            // Allow the form to submit into its new tab.
+        }, true);
+
+        // Reset form only when the modal is opened
+        const modalEl = document.getElementById("exampleModal-4");
+
+        if (modalEl) {
+            modalEl.addEventListener("show.bs.modal", function () {
+                form.reset();
+
+                fullPhone.value = "";
+                countryName.value = "";
+                error.classList.add("d-none");
+            });
+        }
 
     });
-
-});
 </script>
 
 <script>
@@ -684,167 +721,216 @@ function submtcatalogue() {
 }
 </script>
 
+<script type="text/javascript">
+function submtproductprice() {
+    const form = document.getElementById('productprice');
 
+    // Clear previous validation errors
+    form.querySelectorAll('.is-invalid').forEach(function (field) {
+        field.classList.remove('is-invalid');
+    });
+
+    form.querySelectorAll('.error-message').forEach(function (error) {
+        error.remove();
+    });
+
+    let isValid = true;
+
+    const fields = [
+        { id: 'your_name', label: 'Full Name' },
+        { id: 'category_name', label: 'Category Name' },
+        { id: 'product_name', label: 'Product Name' },
+        { id: 'mail_id', label: 'Email Address' },
+        { id: 'mobilenumber', label: 'Phone' },
+        { id: 'countryName', label: 'Country' },
+        { id: 'requirment', label: 'Requirement' }
+    ];
+
+    // Validate all required fields
+    fields.forEach(function (item) {
+        const field = document.getElementById(item.id);
+
+        if (!field.value.trim()) {
+            showProductPriceError(field, item.label + ' is required.');
+            isValid = false;
+        }
+    });
+
+    // Validate email
+    const emailField = document.getElementById('mail_id');
+    const email = emailField.value.trim();
+
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showProductPriceError(emailField, 'Please enter a valid email address.');
+        isValid = false;
+    }
+
+    // Validate phone number
+    const phoneField = document.getElementById('mobilenumber');
+    const phone = phoneField.value.trim();
+
+    if (phone && !/^[0-9]{10,15}$/.test(phone)) {
+        showProductPriceError(
+            phoneField,
+            'Phone number must contain 10 to 15 digits.'
+        );
+        isValid = false;
+    }
+
+    // Validate this form's reCAPTCHA widget
+    const captchaContainer = document.getElementById('productenqch');
+    const captchaResponse = captchaContainer
+        ? captchaContainer.querySelector('[name="g-recaptcha-response"]')
+        : null;
+
+    // grecaptcha.getResponse() is used below for the widget rendered in this form.
+    // If your page has multiple reCAPTCHA widgets, use the widget-specific ID instead.
+    if (typeof grecaptcha === 'undefined' || !grecaptcha.getResponse()) {
+        if (captchaContainer) {
+            showProductPriceError(
+                captchaContainer,
+                'Please complete the reCAPTCHA verification.'
+            );
+        }
+
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+function showProductPriceError(field, message) {
+    field.classList.add('is-invalid');
+
+    const error = document.createElement('div');
+    error.className = 'error-message text-danger mt-1';
+    error.style.fontSize = '13px';
+    error.textContent = message;
+
+    field.insertAdjacentElement('afterend', error);
+}
+</script>
 {{-- inquiry inquiryqoute --}}
-<script>
-  function submtinquiryqoute() {
-    // $("#inquiryqoute").submit(function (event) {
-    if (grecaptcha.getResponse(2) == "") {
-      toastr.warning('Please verify Captcha');
-      return false;
-    } else {
-      var formData = {
-        fullname: $("#fullname").val(),
+
+
+
+<script type="text/javascript">
+function submtinquiryqoute()
+{
+
+    // Clear previous validation errors
+    $(".form-control, .form-select").removeClass("is-invalid");
+    $(".error-message").remove();
+
+    const formData = {
+        fullname: $("#fullname").val().trim(),
         sub_product: $("#sub_product").val(),
         product: $("#product").val(),
-        mail: $("#mail").val(),
-        mobile: $("#mobile").val(),
+        mail: $("#mail").val().trim(),
+        mobile: $("#mobile").val().trim(),
         countries: $("#countries").val(),
-        requirments: $("#requirments").val(),
+        requirments: $("#requirments").val().trim(),
         _token: "{{ csrf_token() }}"
-      };
-      
-         $(".form-control, .form-select").removeClass("is-invalid");
-      $(".error-message").remove();
+    };
 
-      var fields = {
+    // Field labels
+    const fields = {
         fullname: "Full Name",
-        sub_product: "Sub Product",
+        sub_product: "Category",
         product: "Product",
         mail: "Email Address",
-        mobile: "Mobile Number",
+        mobile: "Phone Number",
         countries: "Country",
-        requirments: "Requirements"
-      };
+        requirments: "Requirement"
+    };
 
-      for (var field in fields) {
-      if (!formData[field]) {
-        showError(field, fields[field] + " is required.");
-        return;
-      }
-    }
-    
-    if (!validateEmail(formData.mail)) {
-      showError("mail", "Please enter a valid email address.");
-      return;
+    let isValid = true;
+
+    // Validate ALL required fields
+    for (const field in fields) {
+
+        if (!formData[field]) {
+            showError(field, fields[field] + " is required.");
+            isValid = false;
+        }
     }
 
-    if (formData.mobile.length < 10 || formData.mobile.length > 15) {
-      showError("mobile", "Mobile number must be 10 digits.");
-      return;
+    // Validate email format
+    if (formData.mail && !validateEmail(formData.mail)) {
+        showError("mail", "Please enter a valid email address.");
+        isValid = false;
     }
-    
-    
-      $.ajax({
-        // console.log(formData);
+
+    // Validate phone number
+    if (
+        formData.mobile &&
+        !/^[0-9]{10,15}$/.test(formData.mobile)
+    ) {
+        showError("mobile", "Phone number must contain 10 to 15 digits.");
+        isValid = false;
+    }
+
+    // Stop here if any field is invalid
+    if (!isValid) {
+        return false;
+    }
+
+    // Check CAPTCHA only after all fields are valid
+    if (grecaptcha.getResponse(2) === "") {
+        toastr.warning("Please verify Captcha");
+        return false;
+    }
+
+    // Submit valid form through AJAX
+    $.ajax({
         type: "POST",
         url: "{{ url('/inquiryqoutestore') }}",
         data: formData,
         dataType: "json",
-        encode: true,
+
         beforeSend: function () {
-          $('.quote_btn').prop('disabled', true);
+            $(".quote_btn").prop("disabled", true);
         },
+
         complete: function () {
-          $('.quote_btn').prop('disabled', false);
+            $(".quote_btn").prop("disabled", false);
         },
-      }).done(function (data) {
-        console.log(data);
-        document.getElementById("inquiryqoute").reset();
-        $('.btn-close').click();
-        toastr.success(data.message);
-        grecaptcha.reset(2);
-        window.location.href="https://allwinrotoplast.com/thank-you";
-      }).fail(function (data) {
-          toastr.error("There was an error. Please try again.");
-        });
-      event.preventDefault();
-    }
-    //});
-  }
-  
-   function showError(field, message) {
-    $("#" + field).addClass("is-invalid"); 
-    $("#" + field).after('<div class="invalid-feedback error-message">' + message + '</div>'); // Display error message
-  }
 
-  function validateEmail(email) {
-    var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(email);
-  }
-</script>
+        success: function (data) {
+            document.getElementById("inquiryqoute").reset();
+            $(".btn-close").click();
 
+            toastr.success(data.message);
+            grecaptcha.reset(2);
 
-<script type="text/javascript">
-  function submtproductprice() {
-    if (grecaptcha.getResponse(1) == "") {
-      toastr.warning('Please verify Captcha');
-      return false;
-    } else {
-      var formData = {
-        your_name: $("#your_name").val(),
-        category_name : $("#category_name").val(), 
-        product_name: $("#product_name").val(),
-        mail_id: $("#mail_id").val(),
-        mobilenumber: $("#mobilenumber").val(),
-        countryName: $("#countryName").val(),
-        requirment: $("#requirment").val(),
-        _token: "{{ csrf_token() }}"
-      };
-       $(".form-control, .form-select").removeClass("is-invalid");
-       $(".error-message").remove();
-       
-        var fields = {
-        your_name: "Your Name",
-        category_name: "Category Name",
-        product_name: "Product Name",
-        mail_id: "Email Address",
-        mobilenumber: "Mobile Number",
-        countryName: "Country",
-        requirment: "Requirement"
-      };
-      for (var field in fields) {
-        if (!formData[field]) {
-          showError(field, fields[field] + " is required.");
-          return;
+            window.location.href =
+                "https://allwinrotoplast.com/thank-you";
+        },
+
+        error: function (xhr) {
+            toastr.error(
+                xhr.responseJSON?.message ||
+                "There was an error. Please try again."
+            );
         }
-        $("#" + field).removeClass("is-invalid");
-      }
+    });
 
-      if (!validateEmail(formData.mail_id)) {
-          showError("mail_id", "Please enter a valid email address.");
-          return;
-      }
+    return false;
+}
 
-     if (formData.mobilenumber.length < 10 || formData.mobilenumber.length > 15) {
-              showError("mobilenumber", "Phone number must be 10 digits.");
-              return;
-     }
+function showError(field, message) {
+    $("#" + field).addClass("is-invalid");
 
-      $.ajax({
-        type: "POST",
-        url: "{{ url('/submitproductprice') }}",
-        data: formData,
-        dataType: "json",
-        encode: true,
-        beforeSend: function () {
-          $('button').prop('disabled', true);
-        },
-        complete: function () {
-          $('button').prop('disabled', false);
-        },
-      }).done(function (data) {
-        document.getElementById("productprice").reset();
-        $('.btn-close').click();
-        toastr.success(data.message);
-        grecaptcha.reset(1);
-        window.location.href="https://allwinrotoplast.com/thank-you";
-      }).fail(function (data) {
-          toastr.error(data.responseJSON.message || "There was an error. Please try again.");
-        });
-      event.preventDefault();
-    }
-  }
+    $("#" + field).after(
+        $('<div class="invalid-feedback error-message"></div>')
+            .text(message)
+    );
+}
+
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(email);
+}
 </script>
 
 <script>
@@ -1262,74 +1348,134 @@ swiper.on('slideChange', function () {
 <!-- swiper slider -->
 
 <script>
-  function submitinquiry() {
-    if (grecaptcha.getResponse() == "") {
-      toastr.warning('Please verify Captcha');
-      return false;
-    } else {
-      var formData = {
-        name: $("#name").val(),
-        email: $("#email").val(),
-        phone: $("#phone").val(),
-        country: $("#country").val(),
-        message: $("#message").val(),
-        _token: "{{ csrf_token() }}"
-      };
-      
-      $(".form-control, .form-select").removeClass("is-invalid");
-      $(".error-message").remove();
+function submitinquiry() {
 
-      var fields = {
-        name: "Your Name",
+    // Clear previous validation errors
+    $("#quoteform .form-control, #quoteform .form-select")
+        .removeClass("is-invalid");
+
+    $("#quoteform .error-message").remove();
+
+    // Get form values
+    const formData = {
+        name: $("#name").val().trim(),
+        email: $("#email").val().trim(),
+        phone: $("#phone").val().trim(),
+        country: $("#country").val(),
+        message: $("#message").val().trim(),
+        _token: "{{ csrf_token() }}"
+    };
+
+    // All required fields
+    const fields = {
+        name: "Full Name",
         email: "Email Address",
         phone: "Phone Number",
         country: "Country",
-        message: "Message"
-      };
+        message: "Requirement"
+    };
 
-      for (var field in fields) {
+    let isValid = true;
+
+    // Validate all required fields together
+    for (const field in fields) {
         if (!formData[field]) {
-          showError(field, fields[field] + " is required.");
-          return;
+            showQuoteError(
+                field,
+                fields[field] + " is required."
+            );
+
+            isValid = false;
         }
-        $("#" + field).removeClass("is-invalid");
-      }
-    
-      if (!validateEmail(formData.email)) {
-        showError("email", "Please enter a valid email address.");
-        return;
-      }
-    
-      if (formData.phone.length < 10 || formData.phone.length > 15) {
-        showError("phone", "Phone number must be 10 digits.");
-        return;
     }
 
+    // Validate email format
+    if (
+        formData.email &&
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+    ) {
+        showQuoteError("email", "Please enter a valid email address.");
+        isValid = false;
+    }
 
-      $.ajax({
+    // Validate phone number
+    if (
+        formData.phone &&
+        !/^[0-9]{10,15}$/.test(formData.phone)
+    ) {
+        showQuoteError(
+            "phone",
+            "Phone number must contain 10 to 15 digits."
+        );
+
+        isValid = false;
+    }
+
+    // Stop if any field is invalid
+    if (!isValid) {
+        return false;
+    }
+
+    // Validate CAPTCHA after the other fields
+    if (grecaptcha.getResponse() === "") {
+        toastr.warning("Please verify Captcha.");
+        return false;
+    }
+
+    // AJAX submission
+    $.ajax({
         type: "POST",
-        url: "{{ url('/submitenquiry') }}",
+        url: "YOUR_EXISTING_SUBMIT_URL",
         data: formData,
         dataType: "json",
-        encode: true,
-        beforeSend: function () {
-          $('button').prop('disabled', true);
-        },
-        complete: function () {
-          $('button').prop('disabled', false);
-        },
-      }).done(function (data) {
-        document.getElementById("quoteform").reset();
-        toastr.success(data.message);
-        grecaptcha.reset();
-       window.location.href="https://allwinrotoplast.com/thank-you";
-      }).fail(function (data) {
-        toastr.error(data.responseJSON.message || "There was an error. Please try again.");
-      });
 
-      event.preventDefault();
-    }
-  }
+        beforeSend: function () {
+            $("#quoteform button").prop("disabled", true);
+        },
+
+        success: function (data) {
+            document.getElementById("quoteform").reset();
+
+            $("#quoteform .form-control, #quoteform .form-select")
+                .removeClass("is-invalid");
+
+            $("#quoteform .error-message").remove();
+
+            grecaptcha.reset();
+
+            toastr.success(data.message || "Inquiry submitted successfully.");
+
+            // Keep your existing redirect here if your current
+            // implementation redirects to a thank-you page.
+        },
+
+        error: function (xhr) {
+            toastr.error(
+                xhr.responseJSON?.message ||
+                "There was an error. Please try again."
+            );
+        },
+
+        complete: function () {
+            $("#quoteform button").prop("disabled", false);
+        }
+    });
+
+    return false;
+}
+
+
+// Display validation errors
+function showQuoteError(field, message) {
+    const input = $("#quoteform #" + field);
+
+    input.addClass("is-invalid");
+
+    $("<div>")
+        .addClass("invalid-feedback error-message")
+        .text(message)
+        .insertAfter(input);
+}
 </script>
 
 

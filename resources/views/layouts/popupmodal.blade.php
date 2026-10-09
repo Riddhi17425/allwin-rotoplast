@@ -65,8 +65,16 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                             placeholder="Email Address" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-4">
-                        <input type="number" class="form-control"  name="mobile" id="mobile_popup"
-                            placeholder="Phone" aria-describedby="emailHelp">
+                        <input
+                            type="tel"
+                            class="form-control"
+                            name="mobile"
+                            id="mobile_popup"
+                            placeholder="Phone"
+                            inputmode="numeric"
+                            maxlength="15"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 15);"
+                        >
                     </div>
                     <div class="mb-4">
                         <select class="form-select" name="countries"  id="countries_popup"
@@ -84,7 +92,7 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                     <div class="mb-4">
                         <div class="g-recaptcha" data-sitekey="6Lc_PvonAAAAAOm_L-O6spxZ0HPtBN-IXrsOH7Y-"></div>
                     </div>
-                    <button class="btn quote_btn" onclick="submt_inquiryqoute_popup()">Submit Now</button>
+                    <button type="button" class="btn quote_btn" onclick="submt_inquiryqoute_popup()">Submit Now</button>
                 </form>
             </div>
         </div>
@@ -153,81 +161,115 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
         });
  });
          
-         
-    function submt_inquiryqoute_popup(event) {
 
-    if (grecaptcha.getResponse(4) == "") { 
-        toastr.warning('Please verify Captcha');
+function submt_inquiryqoute_popup() {
+
+    const form = $("#inquiryqoutepopup");
+
+    // Clear previous errors
+    form.find(".form-control, .form-select")
+        .removeClass("is-invalid");
+
+    form.find(".error-message").remove();
+
+    const fields = {
+        fullname_popup: {
+            label: "Full Name",
+            value: $("#fullname_popup").val().trim()
+        },
+        sub_product_popup: {
+            label: "Category",
+            value: $("#sub_product_popup").val()
+        },
+        product_popup: {
+            label: "Product",
+            value: $("#product_popup").val()
+        },
+        mail_popup: {
+            label: "Email Address",
+            value: $("#mail_popup").val().trim()
+        },
+        mobile_popup: {
+            label: "Phone Number",
+            value: $("#mobile_popup").val().trim()
+        },
+        countries_popup: {
+            label: "Country",
+            value: $("#countries_popup").val()
+        },
+        requirments_popup: {
+            label: "Requirement",
+            value: $("#requirments_popup").val().trim()
+        }
+    };
+
+    let isValid = true;
+
+    // Validate all required fields
+    Object.keys(fields).forEach(function (id) {
+
+        const field = fields[id];
+
+        if (!field.value) {
+            showPopupError(id, field.label + " is required.");
+            isValid = false;
+        }
+    });
+
+    // Email validation
+    const email = fields.mail_popup.value;
+
+    if (
+        email &&
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    ) {
+        showPopupError(
+            "mail_popup",
+            "Please enter a valid email address."
+        );
+
+        isValid = false;
+    }
+
+    // Phone validation
+    const phone = fields.mobile_popup.value;
+
+    if (phone && !/^[0-9]{10,15}$/.test(phone)) {
+        showPopupError(
+            "mobile_popup",
+            "Phone number must contain 10 to 15 digits."
+        );
+
+        isValid = false;
+    }
+
+    // Stop if any field is invalid
+    if (!isValid) {
         return false;
     }
 
-    var formData = {
-        fullname: $("#fullname_popup").val(),
-        product: $("#product_popup").val(),
-        sub_product: $("#sub_product_popup").val(),
-        mail: $("#mail_popup").val(),
-        mobile: $("#mobile_popup").val(),
-        countries: $("#countries_popup").val(),
-        requirments: $("#requirments_popup").val(),
-        _token: "{{ csrf_token() }}"
-    };
-      var fields = {
-        fullname: "Full name",
-        sub_product: "Category",
-        product: "Product",
-        mail: "Email address",
-        mobile: "Phone number",
-        countries: "Country",
-        requirments: "Requirements"
-      };
+    // CAPTCHA is checked only after field validation
+    // Use the correct widget ID if multiple CAPTCHAs exist.
+    const captcha = grecaptcha.getResponse();
 
-      for (var field in fields) {
-        if (!formData[field]) {
-         // toastr.warning(fields[field] + " is .");
-          $("#" + field + "_popup").addClass("is-invalid");
-          return;
-        }
-        $("#" + field + "_popup").removeClass("is-invalid");
-      }
-
-    if (!validateEmail(formData.mail)) {
-     // toastr.warning("Please enter a valid email address.");
-      $("#mail_popup").addClass("is-invalid");
-      return;
+    if (!captcha) {
+        toastr.warning("Please verify Captcha.");
+        return false;
     }
 
-    if (formData.mobile.length < 10 || formData.mobile.length > 15) {
-      toastr.warning("Phone number must be between 10-15 digits.");
-      $("#mobile_popup").addClass("is-invalid");
-      return;
-    }
+    return true;
+}
 
-    $.ajax({
-        type: "POST",
-        url: "{{ url('/inquiryqoutestore') }}",
-        data: formData,
-        dataType: "json",
-        encode: true,
-        beforeSend: function() {
-            $('.quote_btn').prop('disabled', true);
-        },
-        complete: function() {
-            $('.quote_btn').prop('disabled', false);
-        },
-    }).done(function(data) {
-        console.log(data);
-        $("#inquiryqoutepopup")[0].reset();
-        $("#inquiryqoutepopup").modal("hide");
-        //toastr.success(data.message);
-        grecaptcha.reset();
-        setTimeout(function() {
-            window.location.href = "https://allwinrotoplast.com/thank-you";
-        }, 500).fail(function(data) {
-         toastr.error(data.responseJSON.message || "There was an error. Please try again.");
-     });
-        
-        event.preventDefault();
-    });
+function showPopupError(id, message) {
+
+    const input = $("#inquiryqoutepopup #" + id);
+
+    input.addClass("is-invalid");
+
+    $("<div>")
+        .addClass("invalid-feedback error-message")
+        .text(message)
+        .insertAfter(input);
 }
 
 

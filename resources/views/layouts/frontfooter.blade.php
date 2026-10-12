@@ -139,6 +139,7 @@ $category = DB::select(DB::raw("SELECT category_name,id from categories "));
                 <div class="modal-body">
                     <h2>Ask a price....</h2>
                     <form class="footer_contact_form mt-4" action="javascript:void(0)" id="productprice" method="post">
+                        @csrf
                       <div class="mb-4">
                         <input type="text" class="form-control" name="your_name" id="your_name" placeholder="Full Name" aria-describedby="emailHelp" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '').replace(/\s+/g, ' ').trimStart();">
                       </div>
@@ -675,13 +676,59 @@ document.addEventListener("DOMContentLoaded", function () {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js" integrity="sha512-3Ei7OPFo83kw3cPbDLeLhn/YF8tZB7Vs8sfli0B/KEekureL5eosDeshYFICCvt4K8i0yUil/lK3cSiic2Wjkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>-->
 <!--<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 <!--recaptcha-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+<script src="https://www.google.com/recaptcha/api.js?onload=initAllCaptchas&render=explicit" async defer></script>
 
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/intlTelInput.min.js"></script>
 <!-- header script -->
 
+<script>
+    window.allCaptchaWidgets = {};
+
+    function initAllCaptchas() {
+        document.querySelectorAll('.g-recaptcha').forEach(function (element) {
+            // Avoid rendering the same CAPTCHA twice
+            if (element.dataset.widgetId !== undefined) {
+                return;
+            }
+
+            const widgetId = grecaptcha.render(element, {
+                sitekey: element.getAttribute('data-sitekey')
+            });
+
+            element.dataset.widgetId = widgetId;
+        });
+    }
+
+    function getFormCaptchaResponse(formSelector) {
+        const form = document.querySelector(formSelector);
+        const captcha = form
+            ? form.querySelector('.g-recaptcha')
+            : null;
+
+        if (!captcha || captcha.dataset.widgetId === undefined) {
+            return '';
+        }
+
+        return grecaptcha.getResponse(
+            Number(captcha.dataset.widgetId)
+        );
+    }
+
+    function resetFormCaptcha(formSelector) {
+        const form = document.querySelector(formSelector);
+        const captcha = form
+            ? form.querySelector('.g-recaptcha')
+            : null;
+
+        if (captcha && captcha.dataset.widgetId !== undefined) {
+            grecaptcha.reset(Number(captcha.dataset.widgetId));
+        }
+    }
+</script>
 
 <script type="text/javascript">
 function submtcatalogue() {
@@ -722,92 +769,194 @@ function submtcatalogue() {
 </script>
 
 <script type="text/javascript">
-function submtproductprice() {
-    const form = document.getElementById('productprice');
+function submtproductprice()
+{
 
-    // Clear previous validation errors
-    form.querySelectorAll('.is-invalid').forEach(function (field) {
-        field.classList.remove('is-invalid');
-    });
+    const form = $("#productprice");
 
-    form.querySelectorAll('.error-message').forEach(function (error) {
-        error.remove();
-    });
+    // Clear previous validation errors for this form only
+    form.find(".form-control, .form-select")
+        .removeClass("is-invalid");
+
+    form.find(".error-message").remove();
+
+    // Collect form data
+    const formData = {
+        your_name: $("#your_name").val().trim(),
+        category_name: $("#category_name").val().trim(),
+        product_name: $("#product_name").val().trim(),
+        mail_id: $("#mail_id").val().trim(),
+        mobilenumber: $("#mobilenumber").val().trim(),
+        countryName: $("#countryName").val(),
+        requirment: $("#requirment").val().trim(),
+        _token: form.find('input[name="_token"]').val()
+    };
 
     let isValid = true;
 
     const fields = [
-        { id: 'your_name', label: 'Full Name' },
-        { id: 'category_name', label: 'Category Name' },
-        { id: 'product_name', label: 'Product Name' },
-        { id: 'mail_id', label: 'Email Address' },
-        { id: 'mobilenumber', label: 'Phone' },
-        { id: 'countryName', label: 'Country' },
-        { id: 'requirment', label: 'Requirement' }
+        { id: "your_name", label: "Full Name" },
+        { id: "category_name", label: "Category Name" },
+        { id: "product_name", label: "Product Name" },
+        { id: "mail_id", label: "Email Address" },
+        { id: "mobilenumber", label: "Phone Number" },
+        { id: "countryName", label: "Country" },
+        { id: "requirment", label: "Requirement" }
     ];
 
-    // Validate all required fields
+    // Validate required fields
     fields.forEach(function (item) {
-        const field = document.getElementById(item.id);
 
-        if (!field.value.trim()) {
-            showProductPriceError(field, item.label + ' is required.');
+        if (!formData[item.id]) {
+            showProductPriceError(
+                document.getElementById(item.id),
+                item.label + " is required."
+            );
+
             isValid = false;
         }
     });
 
     // Validate email
-    const emailField = document.getElementById('mail_id');
-    const email = emailField.value.trim();
+    if (
+        formData.mail_id &&
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.mail_id)
+    ) {
+        showProductPriceError(
+            document.getElementById("mail_id"),
+            "Please enter a valid email address."
+        );
 
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showProductPriceError(emailField, 'Please enter a valid email address.');
         isValid = false;
     }
 
     // Validate phone number
-    const phoneField = document.getElementById('mobilenumber');
-    const phone = phoneField.value.trim();
-
-    if (phone && !/^[0-9]{10,15}$/.test(phone)) {
+    if (
+        formData.mobilenumber &&
+        !/^[0-9]{10,15}$/.test(formData.mobilenumber)
+    ) {
         showProductPriceError(
-            phoneField,
-            'Phone number must contain 10 to 15 digits.'
+            document.getElementById("mobilenumber"),
+            "Phone number must contain 10 to 15 digits."
         );
+
         isValid = false;
     }
 
-    // Validate this form's reCAPTCHA widget
-    const captchaContainer = document.getElementById('productenqch');
-    const captchaResponse = captchaContainer
-        ? captchaContainer.querySelector('[name="g-recaptcha-response"]')
-        : null;
+    // Stop if any field is invalid
+    if (!isValid) {
+        return false;
+    }
 
-    // grecaptcha.getResponse() is used below for the widget rendered in this form.
-    // If your page has multiple reCAPTCHA widgets, use the widget-specific ID instead.
-    if (typeof grecaptcha === 'undefined' || !grecaptcha.getResponse()) {
-        if (captchaContainer) {
-            showProductPriceError(
-                captchaContainer,
-                'Please complete the reCAPTCHA verification.'
+    // Check the CAPTCHA widget belonging to this form
+    if (typeof grecaptcha === "undefined") {
+        toastr.error("CAPTCHA is not loaded. Please refresh the page.");
+        return false;
+    }
+
+    let captchaResponse = "";
+
+    const captchaContainer = document.getElementById("productenqch");
+
+    if (captchaContainer && captchaContainer.dataset.widgetId !== undefined) {
+        captchaResponse = grecaptcha.getResponse(
+            Number(captchaContainer.dataset.widgetId)
+        );
+    } else {
+        // Fallback if the CAPTCHA was rendered without the helper
+        captchaResponse = grecaptcha.getResponse();
+    }
+
+    if (!captchaResponse) {
+        toastr.warning("Please verify CAPTCHA.");
+        return false;
+    }
+
+    // Include CAPTCHA response for server-side verification
+    formData["g-recaptcha-response"] = captchaResponse;
+
+    // AJAX submission
+    $.ajax({
+        type: "POST",
+        url: "{{ url('/submitproductprice') }}",
+        data: formData,
+        dataType: "json",
+
+        beforeSend: function () {
+            form.find(".quote_btn")
+                .prop("disabled", true)
+                .text("Submitting...");
+        },
+
+        success: function (data) {
+
+            if (data.success === false) {
+                toastr.error(
+                    data.message || "Unable to submit your request."
+                );
+                return;
+            }
+
+            // Reset form
+            form[0].reset();
+
+            // Reset only this form's CAPTCHA
+            if (
+                captchaContainer &&
+                captchaContainer.dataset.widgetId !== undefined
+            ) {
+                grecaptcha.reset(
+                    Number(captchaContainer.dataset.widgetId)
+                );
+            } else {
+                grecaptcha.reset();
+            }
+
+            toastr.success(
+                data.message || "Request submitted successfully."
             );
+
+            // Preserve existing thank-you redirect
+            setTimeout(function () {
+                window.location.href =
+                    "https://allwinrotoplast.com/thank-you";
+            }, 500);
+        },
+
+        error: function (xhr) {
+            console.error(
+                "Product price form error:",
+                xhr.status,
+                xhr.responseText
+            );
+
+            toastr.error(
+                xhr.responseJSON?.message ||
+                "There was an error. Please try again."
+            );
+        },
+
+        complete: function () {
+            form.find(".quote_btn")
+                .prop("disabled", false)
+                .text("Submit Now");
         }
+    });
 
-        isValid = false;
-    }
-
-    return isValid;
+    return false;
 }
 
+// Show validation errors
 function showProductPriceError(field, message) {
-    field.classList.add('is-invalid');
 
-    const error = document.createElement('div');
-    error.className = 'error-message text-danger mt-1';
-    error.style.fontSize = '13px';
-    error.textContent = message;
+    const input = $(field);
 
-    field.insertAdjacentElement('afterend', error);
+    input.addClass("is-invalid");
+
+    $("<div>")
+        .addClass("invalid-feedback error-message")
+        .text(message)
+        .insertAfter(input);
 }
 </script>
 {{-- inquiry inquiryqoute --}}
@@ -1425,7 +1574,7 @@ function submitinquiry() {
     // AJAX submission
     $.ajax({
         type: "POST",
-        url: "YOUR_EXISTING_SUBMIT_URL",
+        url: "{{ url('/submitenquiry') }}",
         data: formData,
         dataType: "json",
 

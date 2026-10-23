@@ -2,7 +2,7 @@
     'og_image' => $og_image,
 ])
 @include('layouts.frontMenu')
-
+cons
 @php
     $faqItems = collect(json_decode($finaldata->title_desc, true) ?: [])
         ->filter(function ($item) {
@@ -78,8 +78,7 @@
         @endif
         @if($finaldata->conclusion)
             <div class="blog_details_content mt-4">
-                <!--{!! $finaldata->conclusion !!}-->
-                { $finaldata->conclusion }
+                {!! $finaldata->conclusion !!}
             </div>
         @endif
     </div>

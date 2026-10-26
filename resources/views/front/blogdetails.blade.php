@@ -78,8 +78,14 @@
         @endif
         @if($finaldata->conclusion)
             <div class="blog_details_content mt-4">
-                <!--{!! $finaldata->conclusion !!}-->
-                { $finaldata->conclusion }
+                @php
+                    $conclusion = $finaldata->conclusion ?? '';
+                
+                    if (stripos($conclusion, '<h2>Conclusion</h2>') === false) {
+                        $conclusion = '<h2>Conclusion</h2>' . $conclusion;
+                    }
+                @endphp
+                {!! $conclusion !!}
             </div>
         @endif
     </div>

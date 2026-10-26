@@ -7,6 +7,9 @@ use App\Models\Blog;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Validation\ValidationException;
+
+
 class BlogController extends Controller
 {
     public function __construct()
@@ -40,13 +43,16 @@ class BlogController extends Controller
             'conclusion' => 'nullable',
             'url' => 'required|string|max:255',
             'publish_date' => 'required',
-            'short_description' => 'required|string|max:255',
+            'short_description' => 'required',
             'meta_title' => 'nullable|string|max:255',
-            'meta_description' => 'nullable|string|max:255',
-            'status' => 'required|in:Active,InActive', 
-            'blogimage' => 'nullable|image',
-            'blogimage_front' => 'nullable|image',
-            'cta_image' => 'nullable|image',
+            'meta_description' => 'nullable',
+            //'status' => 'required|in:Active,InActive', 
+            // 'blogimage' => 'nullable|image',
+            // 'blogimage_front' => 'nullable|image',
+            // 'cta_image' => 'nullable|image',
+            'blogimage' => 'nullable',
+            'blogimage_front' => 'nullable',
+            'cta_image' => 'nullable',
         ]);
 
         $payload = [
@@ -96,13 +102,13 @@ class BlogController extends Controller
             'conclusion' => 'nullable',
             'url' => 'required|string|max:255',
             'publish_date' => 'required',
-            'short_description' => 'required|string|max:255',
+            'short_description' => 'nullable',
             'meta_title' => 'nullable|string|max:255',
-            'meta_description' => 'nullable|string|max:255',
-            'status' => 'required|in:Active,InActive',
-            'blogimage' => 'nullable|image',
-            'blogimage_front' => 'nullable|image',
-            'cta_image' => 'nullable|image',
+            'meta_description' => 'nullable',
+            // 'status' => 'required|in:Active,InActive',
+            'blogimage' => 'nullable',
+            'blogimage_front' => 'nullable',
+            'cta_image' => 'nullable',
         ]);
 
         $payload = [

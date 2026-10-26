@@ -157,7 +157,7 @@ class dashboardController extends Controller
         try {
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json'
-            ])->post('https://script.google.com/macros/s/AKfycbzUdU-WKJDn4oA0zCjLydp5yVes-SKuJZnHYNkXWBgBnj5Eswz4XcPL0DW42j0yEUbn/exec', $sheetsData);
+            ])->post('https://script.google.com/macros/s/AKfycbyc0Zne9hmXUssJyqsnYqJZ1mg-_muRcQEiOyqQ9WL3p_YJ2I45Uw6QLXyzYPR-LM_Edg/exec ', $sheetsData);
     
             \Log::info('Google Sheets Response:', [
                 'status' => $response->status(),
@@ -358,7 +358,7 @@ class dashboardController extends Controller
         try {
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json'
-            ])->post('https://script.google.com/macros/s/AKfycbzUdU-WKJDn4oA0zCjLydp5yVes-SKuJZnHYNkXWBgBnj5Eswz4XcPL0DW42j0yEUbn/exec', $sheetsData);
+            ])->post('https://script.google.com/macros/s/AKfycbyc0Zne9hmXUssJyqsnYqJZ1mg-_muRcQEiOyqQ9WL3p_YJ2I45Uw6QLXyzYPR-LM_Edg/exec ', $sheetsData);
     
             if (!$response->successful()) {
                 \Log::error('Google Sheets Error:', [
@@ -562,7 +562,7 @@ class dashboardController extends Controller
             try {
                 $response = Http::withHeaders([
                     'Content-Type' => 'application/json'
-                ])->post('https://script.google.com/macros/s/AKfycbzUdU-WKJDn4oA0zCjLydp5yVes-SKuJZnHYNkXWBgBnj5Eswz4XcPL0DW42j0yEUbn/exec', $sheetsData);
+                ])->post('https://script.google.com/macros/s/AKfycbyc0Zne9hmXUssJyqsnYqJZ1mg-_muRcQEiOyqQ9WL3p_YJ2I45Uw6QLXyzYPR-LM_Edg/exec ', $sheetsData);
     
                 \Log::info('Google Sheets Response:', [
                     'status' => $response->status(),
@@ -784,7 +784,7 @@ class dashboardController extends Controller
         ];
         try {
             Http::withHeaders(['Content-Type' => 'application/json'])
-                ->post('https://script.google.com/macros/s/AKfycbyVHcGTd70zhZ1D9J8VdNt8UjfoAKfd29VtLbf_YE4tueRzN1k28H7NfgPs_ACxFP_m8A/exec', 
+                ->post('https://script.google.com/macros/s/AKfycbzVhRTUYf5BMBE2HyZE9pmoF8OGRyvB5iAbl7kU1RbTleo3DwP18w6W-fziER_3NLh9/exec', 
                     $sheetsData
                 );
         } catch (\Exception $e) {

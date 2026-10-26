@@ -140,7 +140,7 @@ class ProductListController extends Controller
         try {
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json'
-            ])->post('https://script.google.com/macros/s/AKfycbzUdU-WKJDn4oA0zCjLydp5yVes-SKuJZnHYNkXWBgBnj5Eswz4XcPL0DW42j0yEUbn/exec', $sheetsData);
+            ])->post('https://script.google.com/macros/s/AKfycbyc0Zne9hmXUssJyqsnYqJZ1mg-_muRcQEiOyqQ9WL3p_YJ2I45Uw6QLXyzYPR-LM_Edg/exec', $sheetsData);
     
             \Log::info('Google Sheets Response:', [
                 'status' => $response->status(),

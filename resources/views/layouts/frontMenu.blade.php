@@ -78,7 +78,7 @@
                 </div>
 
 @php
- $category = DB::select(DB::raw("SELECT id,category_name from categories WHERE is_delete='0'"));
+ $category = DB::select("SELECT id,category_name from categories WHERE is_delete='0'");
 @endphp
 
                 <div class="menu_flex">
@@ -158,7 +158,7 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org/", 
+  "@@context": "https://schema.org/", 
   "@type": "Product", 
   "name": "Allwin Roto Plast",
   "image": "https://allwinrotoplast.com/public/front/images/main-logo.jpg",

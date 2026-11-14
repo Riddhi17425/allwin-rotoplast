@@ -2,7 +2,7 @@
 @include('layouts.frontMenu')
 
 @php
-$countries = DB::select(DB::raw("SELECT name from countries"));
+$countries = DB::select("SELECT name from countries");
 @endphp
 <section class="backPrevious">
     <div class="container">

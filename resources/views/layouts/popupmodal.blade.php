@@ -1,8 +1,8 @@
 <?php
-$contact = DB::select(DB::raw("SELECT * FROM `cms`"));
-$countries = DB::select(DB::raw("SELECT name from countries"));
-$productname = DB::select(DB::raw("SELECT * from `product`"));
-$category = DB::select(DB::raw("SELECT category_name,id from categories "));
+$contact = DB::select("SELECT * FROM `cms`");
+$countries = DB::select("SELECT name from countries");
+$productname = DB::select("SELECT * from `product`");
+$category = DB::select("SELECT category_name,id from categories ");
 ?>
 
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">

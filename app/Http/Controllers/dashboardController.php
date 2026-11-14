@@ -294,13 +294,13 @@ class dashboardController extends Controller
     public function distributor(){
         $metatitle = "Business Opportunity | Allwin Roto Plast";
         $metadescription = "Need more info on our plastic pallets products, services, or a custom offer? We're here to help. Share your details, and we'll get in touch promptly.";
-        $countries = DB::select(DB::raw("SELECT name from countries"));
+        $countries = DB::select("SELECT name from countries");
         return view('front.distributor',compact('countries', 'metatitle', 'metadescription'));
     }
     public function jointventure(){
         $metatitle = "Unlock Prosperity with Our Rotomold Product Joint Venture";
         $metadescription = "Partner with Allwin Roto Plast for a lucrative joint venture in the world of rotomolded products. Join hands for innovation and growth. Your success, our commitment.";
-        $countries = DB::select(DB::raw("SELECT name from countries"));
+        $countries = DB::select("SELECT name from countries");
         return view('front.jointventureforproduct',compact('countries', 'metatitle', 'metadescription'));
     }
     
@@ -516,7 +516,7 @@ class dashboardController extends Controller
 
     public function inquiryqoute(){
 
-        $countries = DB::select(DB::raw("SELECT name from countries"));
+        $countries = DB::select("SELECT name from countries");
         return view('front.dashboard',compact('countries'));
     }
     

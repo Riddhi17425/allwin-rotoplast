@@ -109,7 +109,7 @@ src=""https://www.facebook.com/tr?id=1012413940761412&ev=PageView&noscript=1""
 <!--Schema-->
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
+"@@context": "https://schema.org",
 "@type": "LocalBusiness",
 "name": "Allwin Roto Plast",
 "image": "https://allwinrotoplast.com/public/front/images/we-are.png",

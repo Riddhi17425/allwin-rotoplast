@@ -1,8 +1,8 @@
 <?php
-$contact = DB::select(DB::raw("SELECT * FROM `cms`"));
-$countries = DB::select(DB::raw("SELECT name from countries"));
-$productname = DB::select(DB::raw("SELECT product_name from product "));
-$subproduct = DB::select(DB::raw("SELECT category_name from categories "));
+$contact = DB::select("SELECT * FROM `cms`");
+$countries = DB::select("SELECT name from countries");
+$productname = DB::select("SELECT product_name from product ");
+$subproduct = DB::select("SELECT category_name from categories ");
 
 // WHERE id = :id"), ['id' => $id])
 ?>

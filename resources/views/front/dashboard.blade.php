@@ -2,7 +2,7 @@
 @include('layouts.frontMenu')
 
 @php
- $category = DB::select(DB::raw("SELECT id,category_name from categories WHERE is_delete='0'"));
+ $category = DB::select("SELECT id,category_name from categories WHERE is_delete='0'");
  
 @endphp
 @foreach($category as $key=>$val)
